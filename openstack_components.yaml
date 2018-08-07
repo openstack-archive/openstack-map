@@ -1,0 +1,353 @@
+---
+intro: >
+  An OpenStack deployment is composed of a number of services that deployers
+  may choose to deploy. Here are the available services.
+tabs:
+
+  - name: OpenStack services
+    map-bucket: openstack
+    prelude: >
+      Those services deliver APIs targeted to cloud end users.
+    categories:
+
+      - category: Compute
+        components:
+
+          - name: nova
+            title: Compute Service
+            desc: >
+              To implement services and associated libraries to provide
+              massively scalable, on demand, self service access to compute
+              resources, including bare metal, virtual machines, and
+              containers.
+            project-team: nova
+            dependencies:
+              - keystone
+              - cinder
+              - neutron
+            see-also:
+              - ironic
+
+          - name: zun
+            title: Containers Service
+            desc: >
+              Zun provides an OpenStack API for launching and managing
+              containers backed by different container technologies.
+              Different from Magnum, Zun is for users who want to treat
+              containers as OpenStack-managed resource. Containers managed
+              by Zun are supposed to be integrated well with other OpenStack
+              resources, such as Neutron network and Cinder volume. Users
+              are provided a simplified APIs to manage containers without
+              the need to explore the complexities of different container
+              technologies.
+            project-team: zun
+            dependencies:
+              - keystone
+
+      - category: Bare metal
+        components:
+
+          - name: ironic
+            title: Bare Metal Provisioning Service
+            desc: >
+              To implement services and associated libraries to provide
+              massively scalable, on demand, self service access to compute
+              resources, including bare metal, virtual machines, and
+              containers.
+            project-team: ironic
+            see-also:
+              - nova
+
+      - category: Storage
+        components:
+
+          - name: cinder
+            title: Block Storage
+            desc: >
+              Cinder is a Block Storage service for OpenStack. It virtualizes
+              the management of block storage devices and provides end users
+              with a self service API to request and consume those resources
+              without requiring any knowledge of where their storage is
+              actually deployed or on what type of device. This is done through
+              the use of either a reference implementation (LVM) or plugin
+              drivers for other storage.
+            project-team: cinder
+            dependencies:
+              - keystone
+            see-also:
+              - nova
+
+      - category: Networking
+        components:
+
+          - name: neutron
+            title: Networking
+            desc: >
+              OpenStack Neutron is an SDN networking project focused on
+              delivering networking-as-a-service (NaaS) in virtual compute
+              environments.
+            project-team: neutron
+            dependencies:
+              - keystone
+            see-also:
+              - nova
+
+      - category: Common services
+        components:
+
+          - name: keystone
+            title: Identity service
+            desc: >
+              Keystone is an OpenStack service that provides API client
+              authentication, service discovery, and distributed multi-tenant
+              authorization by implementing OpenStack’s Identity API. It
+              supports LDAP, OAuth, OpenID Connect, SAML and SQL.
+            project-team: keystone
+
+      - category: Orchestration
+        components:
+
+          - name: heat
+            title: Orchestration
+            desc: >
+              Heat orchestrates the infrastructure resources for a cloud
+              application based on templates in the form of text files that
+              can be treated like code. Heat provides both an OpenStack-native
+              ReST API and a CloudFormation-compatible Query API. Heat also
+              provides an autoscaling service that integrates with the
+              OpenStack Telemetry services, so you can include a scaling group
+              as a resource in a template.
+            project-team: heat
+            dependencies:
+              - keystone
+
+      - category: Workload provisioning
+        components:
+
+          - name: magnum
+            title: Container Orchestration Engine Provisioning
+            desc: >
+              Magnum makes container orchestration engines such as Docker
+              Swarm, Kubernetes, and Apache Mesos available as first class
+              resources in OpenStack. Magnum uses Heat to orchestrate an OS
+              image which contains Docker and Kubernetes and runs that image
+              in either virtual machines or bare metal in a cluster
+              configuration.
+            project-team: magnum
+            dependencies:
+              - heat
+              - keystone
+
+      - category: Application lifecycle
+        components:
+
+          - name: masakari
+            title: Instances High Availability Service
+            desc: >
+              Masakari provides Instances High Availability Service for
+              OpenStack clouds by automatically recovering failed Instances.
+              Currently, Masakari can recover KVM-based Virtual Machine(VM)s
+              from failure events such as VM process down, provisioning process
+              down, and nova-compute host failure. Masakari also provides an
+              API service to manage and control the automated rescue mechanism.
+            project-team: masakari
+            dependencies:
+              - keystone
+
+      - category: API proxies
+        components:
+
+          - name: EC2API
+            title: EC2 API proxy
+            desc: >
+              Provides an EC2-compatible API to OpenStack Nova.
+            project-team: ec2api
+            dependencies:
+              - nova
+
+      - category: Web frontend
+        components:
+
+          - name: horizon
+            title: Dashboard
+            desc: >
+              Horizon is the canonical implementation of OpenStack's dashboard,
+              which is extensible and provides a web based user interface to
+              OpenStack services.
+            project-team: horizon
+            dependencies:
+              - keystone
+
+  - name: Operations services
+    map-bucket: openstack-operations
+    prelude: >
+      Those services deliver APIs primarily targeted to cloud admins and
+      deployers, to help with cloud operations.
+    categories:
+
+      - category: Monitoring tools
+        components:
+
+          - name: ceilometer
+            title: Metering & Data Collection Service
+            desc: >
+              Ceilometer's goal is to efficiently collect, normalise and
+              transform data produced by OpenStack services. The data it
+              collects is intended to be used to create different views
+              and help solve various telemetry use cases. Aodh and Gnocchi
+              are two examples of services extending Ceilometer data.
+            project-team: telemetry
+            dependencies:
+              - keystone
+            see-also:
+              - aodh
+
+          - name: panko
+            title: Event, Metadata Indexing Service
+            desc: >
+              Panko is designed to provide a metadata indexing, event storage
+              service which enables users to capture the state information of
+              OpenStack resources at a given time. Its aim is to enable a
+              scalable means of storing both short and long term data for use
+              cases such as auditing and system debugging.
+            project-team: telemetry
+            dependencies:
+              - keystone
+
+          - name: monasca
+            title: Monitoring
+            desc: >
+              Monasca is a open-source multi-tenant, highly scalable,
+              performant, fault-tolerant monitoring-as-a-service solution
+              that integrates with OpenStack. It uses a REST API for high-speed
+              metrics processing and querying and has a streaming alarm engine
+              and notification engine.
+            project-team: monasca
+            dependencies:
+              - keystone
+
+      - category: Optimization/policy tools
+        components:
+
+          - name: watcher
+            title: Optimization Service
+            desc: >
+              Watcher provides a flexible and scalable resource optimization
+              service for multi-tenant OpenStack-based clouds. Watcher provides
+              a complete optimization loop—including everything from a metrics
+              receiver, optimization processor and an action plan applier.
+            project-team: watcher
+            dependencies:
+              - keystone
+
+      - category: Billing / Business logic
+        components:
+
+          - name: cloudkitty
+            title: Billing and chargebacks
+            desc: >
+              CloudKitty is a rating-as-a-service project designed to translate
+              metrics to prices. CloudKitty supports multiple collectors,
+              multiple rating policies and multiple outputs.
+            dependencies:
+              - keystone
+
+      - category: Multi-region tools
+        components:
+
+          - name: tricircle
+            title: Networking Automation for Multi-Region Deployments
+            desc: >
+              Tricircle provides networking automation across Neutron in
+              multi-region OpenStack deployments. Use cases include application
+              high availability, dual ISPs for internet link redundancy,
+              east-west traffic isolation, cross Nuetron L2 network for NFV,
+              and cloud capacity expansion.
+            dependencies:
+              - neutron
+
+  - name: Add-ons to services
+    prelude: >
+      This software runs as an add-on or plug-in into other OpenStack
+      services.
+    categories:
+
+      - category: Swift add-ons
+        components:
+
+          - name: storlets
+            title: Computable object storage
+            desc: >
+              Openstack Storlets is an extension to Openstack Swift with the
+              ability to run user defined computations - called storlets -
+              inside the object store in a secure and isolated manner through
+              the use of Docker containers. A storlet is a compiled and
+              packaged code (e.g. a .jar file) that can be uploaded to Swift
+              as any other object. Once uploaded the storlet can be invoked
+              over data objects in Swift.
+            project-team: storlets
+            dependencies:
+              - swift
+              - keystone
+
+      - category: Neutron plug-ins
+        components:
+
+          - name: dragonflow
+            title: Distributed SDN controller
+            desc: >
+              Dragonflow is a distributed SDN controller for OpenStack Neutron
+              supporting distributed Switching, Routing, DHCP and more.
+            project-team: dragonflow
+            dependencies:
+              - neutron
+
+  - name: Bridges for adjacent tech
+    prelude: >
+      This software lets other open infrastructure stacks leverage OpenStack
+      components.
+    categories:
+
+      - category: Containers
+        components:
+
+          - name: kuryr
+            title: OpenStack Networking integration for containers
+            desc: >
+              Bridge between containers frameworks networking models to
+              OpenStack networking abstraction 
+            project-team: kuryr
+            dependencies:
+              - neutron
+
+          - name: fuxi
+            title: OpenStack Storage integration for containers
+            desc: >
+              Fuxi focuses on enabling Docker container to use Cinder volume
+              and Manila share, thus Docker volume can reuse the advance
+              features and numerous vendor drivers in Cinder and Manila.
+              With Fuxi, Cinder and Manila can be used as the unified
+              persistence storage provider for virtual machine, baremetal
+              and Docker container.
+            project-team: fuxi
+            dependencies:
+              - cinder
+            see-also:
+              - manila
+
+      - category: NFV
+        components:
+
+          - name: tacker
+            title: NFV Orchestration
+            desc: >
+              Tacker provides a generic VNF Manager (VNFM) and an NFV
+              Orchestrator (NFVO) to deploy and operate Network Services
+              and Virtual Network Functions (VNFs) on an NFV infrastructure
+              platform like OpenStack. It is based on ETSI MANO Architectural
+              Framework and provides a functional stack to Orchestrate Network
+              Services end-to-end using VNFs.
+            project-team: tacker
+            dependencies:
+              - nova
+              - neutron
