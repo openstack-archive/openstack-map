@@ -1,7 +1,5 @@
 ---
-intro: >
-  An OpenStack deployment is composed of a number of services that deployers
-  may choose to deploy. Here are the available services.
+name: OpenStack Components
 tabs:
 
   - name: OpenStack services
