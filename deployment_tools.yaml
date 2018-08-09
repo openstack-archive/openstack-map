@@ -1,3 +1,71 @@
 ---
 name: Deployment tools
-tabs: []
+hide-subtabs: True
+tabs:
+
+  - name: Deployment tools
+    map-bucket: openstack-lifecyclemanagement
+    prelude: >
+      Tools and packaging recipes to help install and maintain the lifecycle of
+      OpenStack deployments.
+    categories:
+
+      - category: Frameworks for lifecycle management
+        components:
+i
+          - name: tripleo
+            title: Deploys OpenStack using OpenStack itself
+            desc: >
+              TripleO is a project aimed at installing, upgrading and
+              operating OpenStack clouds using OpenStack’s own cloud
+              facilities as the foundation - building on Nova, Ironic,
+              Neutron and Heat to automate cloud management at datacenter
+              scale.
+            project-team: tripleo
+
+          - name: openstack-helm
+            title: Deploys OpenStack in containers using Helm
+            desc: >
+              Collection of Helm charts that simply, resiliently,
+              and flexibly deploy OpenStack and related services on Kubernetes.
+            project-team: OpenStack-Helm
+
+          - name: kolla-ansible
+            title: Deploys OpenStack in containers using Ansible
+            desc: >
+              Kolla-Ansible deploys OpenStack via Kolla containers using
+              the Ansible framework.
+            project-team: kolla
+
+          - name: openstack-charms
+            title: Deploys OpenStack in containers using Charms and Juju
+            desc: >
+              Collection of Charms to deploy OpenStack using
+              the Juju framework.
+            project-team: OpenStack Charms
+
+      - category: Packaging recipes for popular frameworks
+        components:
+
+          - name: openstack-ansible
+            title: Ansible playbooks to deploy OpenStack
+            project-team: OpenStackAnsible
+
+          - name: LOCI
+            title: Lightweight OCI containers
+            desc: >
+              Recipes and tools to build lightweight OCI compliant container
+              tooling and images for OpenStack services.
+            project-team: loci
+
+          - name: puppet-openstack
+            title: Puppet modules to deploy OpenStack
+            project-team: Puppet OpenStack
+
+          - name: chef-openstack
+            title: Chef cookbooks to deploy OpenStack
+            project-team: Chef OpenStack
+
+          - name: RPM-packaging
+            title: RPM package specs to deploy OpenStack
+            project-team: Packaging-rpm
