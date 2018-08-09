@@ -12,7 +12,7 @@ tabs:
 
       - category: Frameworks for lifecycle management
         components:
-i
+
           - name: tripleo
             title: Deploys OpenStack using OpenStack itself
             desc: >

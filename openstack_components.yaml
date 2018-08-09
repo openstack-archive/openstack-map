@@ -523,8 +523,8 @@ tabs:
               high availability, dual ISPs for internet link redundancy,
               east-west traffic isolation, cross Nuetron L2 network for NFV,
               and cloud capacity expansion.
-           project-team: tricircle
-           since: Ocata
+            project-team: tricircle
+            since: Ocata
 
   - name: Add-ons to services
     prelude: >
