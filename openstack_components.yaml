@@ -22,6 +22,7 @@ tabs:
               resources, including bare metal, virtual machines, and
               containers.
             project-team: nova
+            since: Austin
             dependencies:
               - cinder
               - neutron
@@ -42,6 +43,7 @@ tabs:
               the need to explore the complexities of different container
               technologies.
             project-team: zun
+            since: Pike
 
           - name: qinling
             title: Functions Service
@@ -49,7 +51,7 @@ tabs:
               Qinling provides a platform to support serverless functions
               (like AWS Lambda).
             project-team: qinling
-            since: rocky
+            since: Rocky
 
       - category: Bare metal
         components:
@@ -62,6 +64,7 @@ tabs:
               resources, including bare metal, virtual machines, and
               containers.
             project-team: ironic
+            since: Kilo
             dependencies:
               - glance
             see-also:
@@ -75,6 +78,7 @@ tabs:
               as GPU, FPGA, ASIC, NP, SoCs, NVMe/NOF SSDs, ODP, DPDK/SPDK and
               so on).
             project-team: cyborg
+            since: Rocky
             dependencies:
               - nova
 
@@ -91,6 +95,7 @@ tabs:
               the entire data set. Swift is ideal for storing unstructured
               data that can grow without bound.
             project-team: swift
+            since: Austin
             see-also:
               - storlets
 
@@ -105,6 +110,7 @@ tabs:
               the use of either a reference implementation (LVM) or plugin
               drivers for other storage.
             project-team: cinder
+            since: Folsom
             see-also:
               - nova
 
@@ -114,6 +120,7 @@ tabs:
               Manila provides coordinated access to shared or distributed file
               systems.
             project-team: manila
+            since: Liberty
 
       - category: Networking
         components:
@@ -125,6 +132,7 @@ tabs:
               delivering networking-as-a-service (NaaS) in virtual compute
               environments.
             project-team: neutron
+            since: Folsom
             see-also:
               - nova
 
@@ -142,12 +150,14 @@ tabs:
               scaling feature differentiates Octavia from other load balancing
               solutions, thereby making Octavia truly suited “for the cloud.”
             project-team: octavia
+            since: Pike
 
           - name: designate
             title: DNS service
             desc: >
               Designate provides DNS-as-a-service for OpenStack.
             project-team: designate
+            since: Liberty
 
       - category: Shared services
         components:
@@ -160,6 +170,7 @@ tabs:
               authorization by implementing OpenStack’s Identity API. It
               supports LDAP, OAuth, OpenID Connect, SAML and SQL.
             project-team: keystone
+            since: Essex
 
           - name: glance
             title: Image service
@@ -171,6 +182,7 @@ tabs:
               can be stored in a variety of locations from simple filesystems
               to object-storage systems like the OpenStack Swift project.
             project-team: glance
+            since: Bexar
             see-also:
               - nova
               - swift
@@ -183,6 +195,7 @@ tabs:
               passwords, encryption keys, X.509 Certificates and raw binary
               data.
             project-team: barbican
+            since: Liberty
 
           - name: karbor
             title: Application Data Protection as a Service
@@ -195,6 +208,7 @@ tabs:
               data protection services into a coherent and unified flow for
               the user.
             project-team: karbor
+            since: Pike
 
           - name: searchlight
             title: Indexing and Search
@@ -207,6 +221,7 @@ tabs:
               authentication and Role Based Access Control to provide
               appropriate protection of data.
             project-team: searchlight
+            since: Liberty
 
       - category: Orchestration
         components:
@@ -222,6 +237,7 @@ tabs:
               OpenStack Telemetry services, so you can include a scaling group
               as a resource in a template.
             project-team: heat
+            since: Havana
 
           - name: senlin
             title: Clustering service
@@ -231,6 +247,7 @@ tabs:
               OpenStack services. The goal is to make orchestration of
               collections of similar objects easier.
             project-team: senlin
+            since: Mitaka
 
           - name: mistral
             title: Workflow service
@@ -244,6 +261,7 @@ tabs:
               execution order, parallelism, synchronization and high
               availability.
             project-team: mistral
+            since: Liberty
 
           - name: zaqar
             title: Messaging Service
@@ -259,6 +277,7 @@ tabs:
               Cloud operators can leverage Zaqar to provide equivalents of
               SQS and SNS to their customers.
             project-team: zaqar
+            since: Liberty
 
           - name: blazar
             title: Resource reservation service
@@ -268,6 +287,7 @@ tabs:
               a specific time period and it leases these resources to users
               based on their reservations.
             project-team: blazar
+            since: Queens
 
           - name: aodh
             title: Alarming Service
@@ -276,6 +296,7 @@ tabs:
               on defined rules against sample or event data collected by
               Ceilometer.
             project-team: Telemetry
+            since: Liberty
 
       - category: Workload provisioning
         components:
@@ -290,6 +311,7 @@ tabs:
               in either virtual machines or bare metal in a cluster
               configuration.
             project-team: magnum
+            since: Mitaka
             dependencies:
               - heat
 
@@ -302,6 +324,7 @@ tabs:
               configuration parameters such as the framework version, cluster
               topology, node hardware details and more.
             project-team: sahara
+            since: Juno
 
           - name: trove
             title: Database as a Service
@@ -309,6 +332,7 @@ tabs:
               Trove is a database-as-a-service provisioning relational and
               non-relational database engines.
             project-team: trove
+            since: Icehouse
 
       - category: Application lifecycle
         components:
@@ -323,6 +347,7 @@ tabs:
               down, and nova-compute host failure. Masakari also provides an
               API service to manage and control the automated rescue mechanism.
             project-team: masakari
+            since: Rocky
 
           - name: murano
             title: Application Catalog
@@ -334,6 +359,7 @@ tabs:
               with the push of a button. Murano uses OpenStack Heat to
               orchestrate infrastructure resources for the application.
             project-team: murano
+            since: Kilo
             dependencies:
               - heat
 
@@ -344,6 +370,7 @@ tabs:
               your application development process by automating the
               source-to-image process, and simplifying app-centric deployment.
             project-team: solum
+            since: Mitaka
 
           - name: freezer
             title: Backup, Restore, and Disaster Recovery
@@ -357,6 +384,7 @@ tabs:
               It is aimed at being useful for all environments, including
               large ephemeral Clouds.
             project-team: freezer
+            since: Mitaka
 
       - category: API proxies
         components:
@@ -366,6 +394,7 @@ tabs:
             desc: >
               Provides an EC2-compatible API to OpenStack Nova.
             project-team: ec2api
+            since: Rocky
             dependencies:
               - nova
 
@@ -379,6 +408,7 @@ tabs:
               which is extensible and provides a web based user interface to
               OpenStack services.
             project-team: horizon
+            since: Essex
 
   - name: Operations services
     map-bucket: openstack-operations
@@ -399,6 +429,7 @@ tabs:
               and help solve various telemetry use cases. Aodh and Gnocchi
               are two examples of services extending Ceilometer data.
             project-team: Telemetry
+            since: Havana
             see-also:
               - aodh
 
@@ -411,6 +442,7 @@ tabs:
               scalable means of storing both short and long term data for use
               cases such as auditing and system debugging.
             project-team: Telemetry
+            since: Newton
 
           - name: monasca
             title: Monitoring
@@ -421,6 +453,7 @@ tabs:
               metrics processing and querying and has a streaming alarm engine
               and notification engine.
             project-team: monasca
+            since: Mitaka
 
       - category: Optimization/policy tools
         components:
@@ -433,6 +466,7 @@ tabs:
               a complete optimization loop—including everything from a metrics
               receiver, optimization processor and an action plan applier.
             project-team: watcher
+            since: Newton
 
           - name: vitrage
             title: RCA (Root Cause Analysis service)
@@ -442,6 +476,7 @@ tabs:
               yielding insights regarding the root cause of problems and
               deducing their existence before they are directly detected.
             project-team: vitrage
+            since: Newton
 
           - name: congress
             title: Governance
@@ -450,6 +485,7 @@ tabs:
               across any collection of cloud services in order to offer
               governance and compliance for dynamic infrastructures.
             project-team: congress
+            since: Liberty
 
           - name: rally
             title: Benchmark service
@@ -473,6 +509,8 @@ tabs:
               CloudKitty is a rating-as-a-service project designed to translate
               metrics to prices. CloudKitty supports multiple collectors,
               multiple rating policies and multiple outputs.
+            project-team: cloudkitty
+            since: Mitaka
 
       - category: Multi-region tools
         components:
@@ -485,6 +523,8 @@ tabs:
               high availability, dual ISPs for internet link redundancy,
               east-west traffic isolation, cross Nuetron L2 network for NFV,
               and cloud capacity expansion.
+           project-team: tricircle
+           since: Ocata
 
   - name: Add-ons to services
     prelude: >
@@ -506,6 +546,7 @@ tabs:
               as any other object. Once uploaded the storlet can be invoked
               over data objects in Swift.
             project-team: storlets
+            since: Queens
             dependencies:
               - swift
 
@@ -548,7 +589,7 @@ tabs:
               With Fuxi, Cinder and Manila can be used as the unified
               persistence storage provider for virtual machine, baremetal
               and Docker container.
-            project-team: fuxi
+            project-team: kuryr
             see-also:
               - cinder
               - manila
@@ -566,3 +607,4 @@ tabs:
               Framework and provides a functional stack to Orchestrate Network
               Services end-to-end using VNFs.
             project-team: tacker
+            since: Mitaka
