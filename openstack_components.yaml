@@ -5,7 +5,10 @@ tabs:
   - name: OpenStack services
     map-bucket: openstack
     prelude: >
-      Those services deliver APIs targeted to cloud end users.
+      An OpenStack deployment contains a number of components providing
+      APIs to access infrastructure resources. This page lists the various
+      services that can be deployed to provide such resources to cloud
+      end users.
     categories:
 
       - category: Compute
@@ -20,9 +23,9 @@ tabs:
               containers.
             project-team: nova
             dependencies:
-              - keystone
               - cinder
               - neutron
+              - glance
             see-also:
               - ironic
 
@@ -39,8 +42,14 @@ tabs:
               the need to explore the complexities of different container
               technologies.
             project-team: zun
-            dependencies:
-              - keystone
+
+          - name: qinling
+            title: Functions Service
+            desc: >
+              Qinling provides a platform to support serverless functions
+              (like AWS Lambda).
+            project-team: qinling
+            since: rocky
 
       - category: Bare metal
         components:
@@ -53,11 +62,37 @@ tabs:
               resources, including bare metal, virtual machines, and
               containers.
             project-team: ironic
+            dependencies:
+              - glance
             see-also:
+              - nova
+
+          - name: cyborg
+            title: Accelerators resource management
+            desc: >
+              Cyborg provides a general purpose management framework for
+              acceleration resources (i.e. various types of accelerators such
+              as GPU, FPGA, ASIC, NP, SoCs, NVMe/NOF SSDs, ODP, DPDK/SPDK and
+              so on).
+            project-team: cyborg
+            dependencies:
               - nova
 
       - category: Storage
         components:
+
+          - name: swift
+            title: Object store
+            desc: >
+              Swift is a highly available, distributed, eventually consistent
+              object/blob store. Organizations can use Swift to store lots of
+              data efficiently, safely, and cheaply. It's built for scale and
+              optimized for durability, availability, and concurrency across
+              the entire data set. Swift is ideal for storing unstructured
+              data that can grow without bound.
+            project-team: swift
+            see-also:
+              - storlets
 
           - name: cinder
             title: Block Storage
@@ -70,10 +105,15 @@ tabs:
               the use of either a reference implementation (LVM) or plugin
               drivers for other storage.
             project-team: cinder
-            dependencies:
-              - keystone
             see-also:
               - nova
+
+          - name: manila
+            title: Shared filesystems
+            desc: >
+              Manila provides coordinated access to shared or distributed file
+              systems.
+            project-team: manila
 
       - category: Networking
         components:
@@ -85,12 +125,31 @@ tabs:
               delivering networking-as-a-service (NaaS) in virtual compute
               environments.
             project-team: neutron
-            dependencies:
-              - keystone
             see-also:
               - nova
 
-      - category: Common services
+          - name: octavia
+            title: Load balancer
+            desc: >
+              Octavia is an open source, operator-scale load balancing solution
+              designed to work with OpenStack. Octavia was borne out of the
+              Neutron LBaaS project, and starting with the Liberty release of
+              OpenStack, Octavia has become the reference implementation for
+              Neutron LBaaS version 2. Octavia accomplishes its delivery of
+              load balancing services by managing a fleet of virtual machines,
+              containers, or bare metal servers —collectively known as
+              amphorae— which it spins up on demand. This on-demand, horizontal
+              scaling feature differentiates Octavia from other load balancing
+              solutions, thereby making Octavia truly suited “for the cloud.”
+            project-team: octavia
+
+          - name: designate
+            title: DNS service
+            desc: >
+              Designate provides DNS-as-a-service for OpenStack.
+            project-team: designate
+
+      - category: Shared services
         components:
 
           - name: keystone
@@ -101,6 +160,53 @@ tabs:
               authorization by implementing OpenStack’s Identity API. It
               supports LDAP, OAuth, OpenID Connect, SAML and SQL.
             project-team: keystone
+
+          - name: glance
+            title: Image service
+            desc: >
+              Glance image services include discovering, registering, and
+              retrieving virtual machine images. Glance has a RESTful API
+              that allows querying of VM image metadata as well as retrieval
+              of the actual image. VM images made available through Glance
+              can be stored in a variety of locations from simple filesystems
+              to object-storage systems like the OpenStack Swift project.
+            project-team: glance
+            see-also:
+              - nova
+              - swift
+
+          - name: barbican
+            title: Key management
+            desc: >
+              Barbican is the OpenStack Key Manager service. It provides secure
+              storage, provisioning and management of secret data, such as
+              passwords, encryption keys, X.509 Certificates and raw binary
+              data.
+            project-team: barbican
+
+          - name: karbor
+            title: Application Data Protection as a Service
+            desc: >
+              Karbor deals with protecting the Data and Meta-Data that
+              comprises an OpenStack-deployed application against loss/damage
+              (e.g. backup, replication) - not to be confused with Application
+              Security or DLP. It does that by providing a standard framework
+              of APIs and services that enables vendors to introduce various
+              data protection services into a coherent and unified flow for
+              the user.
+            project-team: karbor
+
+          - name: searchlight
+            title: Indexing and Search
+            desc: >
+              The Searchlight project provides indexing and search capabilities
+              across OpenStack resources. Its goal is to achieve high
+              performance and flexible querying combined with near real-time
+              indexing. It uses Elasticsearch, a real-time distributed indexing
+              and search engine built on Apache Lucene, but adds OpenStack
+              authentication and Role Based Access Control to provide
+              appropriate protection of data.
+            project-team: searchlight
 
       - category: Orchestration
         components:
@@ -116,8 +222,60 @@ tabs:
               OpenStack Telemetry services, so you can include a scaling group
               as a resource in a template.
             project-team: heat
-            dependencies:
-              - keystone
+
+          - name: senlin
+            title: Clustering service
+            desc: >
+              Senlin is a clustering service for OpenStack clouds. It creates
+              and operates clusters of homogeneous objects exposed by other
+              OpenStack services. The goal is to make orchestration of
+              collections of similar objects easier.
+            project-team: senlin
+
+          - name: mistral
+            title: Workflow service
+            desc: >
+              Mistral is a workflow service. Most business processes consist
+              of multiple distinct interconnected steps that need to be
+              executed in a particular order in a distributed environment.
+              One can describe such process as a set of tasks and task
+              relations (via YAML-based language) and upload such description
+              to Mistral so that it takes care of state management, correct
+              execution order, parallelism, synchronization and high
+              availability.
+            project-team: mistral
+
+          - name: zaqar
+            title: Messaging Service
+            desc: >
+              Zaqar is a multi-tenant cloud messaging service for web and
+              mobile developers. The service features a fully RESTful API,
+              which developers can use to send messages between various
+              components of their SaaS and mobile applications. Underlying
+              this API is an efficient messaging engine designed with
+              scalability and security in mind. Other OpenStack components
+              can integrate with Zaqar to surface events to end users and to
+              communicate with guest agents that run in the "over-cloud" layer.
+              Cloud operators can leverage Zaqar to provide equivalents of
+              SQS and SNS to their customers.
+            project-team: zaqar
+
+          - name: blazar
+            title: Resource reservation service
+            desc: >
+              Blazar is a resource reservation service for OpenStack. Blazar
+              enables users to reserve a specific type/amount of resources for
+              a specific time period and it leases these resources to users
+              based on their reservations.
+            project-team: blazar
+
+          - name: aodh
+            title: Alarming Service
+            desc: >
+              Aodh's goal is to enable the ability to trigger actions based
+              on defined rules against sample or event data collected by
+              Ceilometer.
+            project-team: Telemetry
 
       - category: Workload provisioning
         components:
@@ -134,7 +292,23 @@ tabs:
             project-team: magnum
             dependencies:
               - heat
-              - keystone
+
+          - name: sahara
+            title: Big Data Processing Framework Provisioning
+            desc: >
+              The sahara project aims to provide users with a simple means
+              to provision data processing frameworks (such as Hadoop, Spark
+              and Storm) on OpenStack. This is accomplished by specifying
+              configuration parameters such as the framework version, cluster
+              topology, node hardware details and more.
+            project-team: sahara
+
+          - name: trove
+            title: Database as a Service
+            desc: >
+              Trove is a database-as-a-service provisioning relational and
+              non-relational database engines.
+            project-team: trove
 
       - category: Application lifecycle
         components:
@@ -149,8 +323,40 @@ tabs:
               down, and nova-compute host failure. Masakari also provides an
               API service to manage and control the automated rescue mechanism.
             project-team: masakari
+
+          - name: murano
+            title: Application Catalog
+            desc: >
+              Murano enables application developers and cloud administrators
+              to publish various cloud-ready applications in a browsable
+              catalog. Cloud users -- including inexperienced ones -- can then
+              use the catalog to compose reliable application environments
+              with the push of a button. Murano uses OpenStack Heat to
+              orchestrate infrastructure resources for the application.
+            project-team: murano
             dependencies:
-              - keystone
+              - heat
+
+          - name: solum
+            title: Software Development Lifecycle Automation
+            desc: >
+              To make cloud services easier to consume and integrate with
+              your application development process by automating the
+              source-to-image process, and simplifying app-centric deployment.
+            project-team: solum
+
+          - name: freezer
+            title: Backup, Restore, and Disaster Recovery
+            desc: >
+              Freezer is a distributed backup, restore and disaster recovery
+              as a service platform. It is designed to be multi OS (Linux,
+              Windows, OSX...), focused on providing efficiency and flexibility
+              for block based backups, file based incremental backups,
+              point-in-time actions, jobs synchronization (i.e. backup
+              synchronization over multiple nodes) and many other features.
+              It is aimed at being useful for all environments, including
+              large ephemeral Clouds.
+            project-team: freezer
 
       - category: API proxies
         components:
@@ -173,8 +379,6 @@ tabs:
               which is extensible and provides a web based user interface to
               OpenStack services.
             project-team: horizon
-            dependencies:
-              - keystone
 
   - name: Operations services
     map-bucket: openstack-operations
@@ -194,9 +398,7 @@ tabs:
               collects is intended to be used to create different views
               and help solve various telemetry use cases. Aodh and Gnocchi
               are two examples of services extending Ceilometer data.
-            project-team: telemetry
-            dependencies:
-              - keystone
+            project-team: Telemetry
             see-also:
               - aodh
 
@@ -208,9 +410,7 @@ tabs:
               OpenStack resources at a given time. Its aim is to enable a
               scalable means of storing both short and long term data for use
               cases such as auditing and system debugging.
-            project-team: telemetry
-            dependencies:
-              - keystone
+            project-team: Telemetry
 
           - name: monasca
             title: Monitoring
@@ -221,8 +421,6 @@ tabs:
               metrics processing and querying and has a streaming alarm engine
               and notification engine.
             project-team: monasca
-            dependencies:
-              - keystone
 
       - category: Optimization/policy tools
         components:
@@ -235,8 +433,36 @@ tabs:
               a complete optimization loop—including everything from a metrics
               receiver, optimization processor and an action plan applier.
             project-team: watcher
-            dependencies:
-              - keystone
+
+          - name: vitrage
+            title: RCA (Root Cause Analysis service)
+            desc: >
+              Vitrage is the OpenStack RCA (Root Cause Analysis) service for
+              organizing, analyzing and expanding OpenStack alarms & events,
+              yielding insights regarding the root cause of problems and
+              deducing their existence before they are directly detected.
+            project-team: vitrage
+
+          - name: congress
+            title: Governance
+            desc: >
+              Congress is an OpenStack project to provide policy as a service
+              across any collection of cloud services in order to offer
+              governance and compliance for dynamic infrastructures.
+            project-team: congress
+
+          - name: rally
+            title: Benchmark service
+            desc: >
+              Rally is a benchmarking and performance analysis tool for
+              OpenStack that can be used to automate measuring and profiling
+              focused on how new code changes affect OpenStack performance,
+              detect scaling and performance issues, and investigate how
+              different deployment architectures and hardware affect OpenStack
+              performance. It can be used as a basic tool for an OpenStack
+              CI/CD system that would continuously improve its SLA, performance
+              and stability.
+            project-team: rally
 
       - category: Billing / Business logic
         components:
@@ -247,8 +473,6 @@ tabs:
               CloudKitty is a rating-as-a-service project designed to translate
               metrics to prices. CloudKitty supports multiple collectors,
               multiple rating policies and multiple outputs.
-            dependencies:
-              - keystone
 
       - category: Multi-region tools
         components:
@@ -261,8 +485,6 @@ tabs:
               high availability, dual ISPs for internet link redundancy,
               east-west traffic isolation, cross Nuetron L2 network for NFV,
               and cloud capacity expansion.
-            dependencies:
-              - neutron
 
   - name: Add-ons to services
     prelude: >
@@ -286,7 +508,6 @@ tabs:
             project-team: storlets
             dependencies:
               - swift
-              - keystone
 
       - category: Neutron plug-ins
         components:
@@ -302,8 +523,8 @@ tabs:
 
   - name: Bridges for adjacent tech
     prelude: >
-      This software lets other open infrastructure stacks leverage OpenStack
-      components.
+      Software in this section facilitates integration of OpenStack components
+      in adjacent open infrastructure stacks.
     categories:
 
       - category: Containers
@@ -328,9 +549,8 @@ tabs:
               persistence storage provider for virtual machine, baremetal
               and Docker container.
             project-team: fuxi
-            dependencies:
-              - cinder
             see-also:
+              - cinder
               - manila
 
       - category: NFV
@@ -346,6 +566,3 @@ tabs:
               Framework and provides a functional stack to Orchestrate Network
               Services end-to-end using VNFs.
             project-team: tacker
-            dependencies:
-              - nova
-              - neutron
