@@ -1,3 +1,37 @@
 ---
 name: SDKs
-tabs: []
+hide-subtabs: True
+tabs:
+
+  - name: SDKs
+    map-bucket: openstack-user
+    prelude: >
+      Client tools and libraries for OpenStack cloud end users.
+    categories:
+
+      - category: Command-line clients
+        components:
+
+          - name: openstackclient
+            title: Command-line interface for all OpenStack services
+            desc: >
+              Single command-line interface for OpenStack services with a
+              uniform command set and format.
+            project-team: OpenStackClient
+            links:
+              - Download: https://pypi.org/project/python-openstackclient/
+              - Docs: https://docs.openstack.org/python-openstackclient/latest/
+
+      - category: Python SDKs
+        components:
+
+          - name: openstacksdk
+            title: Command-line interface for all OpenStack services
+            desc: >
+              Multi-cloud aware Python SDK for the OpenStack REST API
+              exposing both the full set of low-level APIs as well as
+              curated higher level business logic.
+            project-team: OpenStackSDK
+            links:
+              - Download: https://pypi.org/project/openstacksdk/
+              - Docs: https://docs.openstack.org/openstacksdk/latest/
