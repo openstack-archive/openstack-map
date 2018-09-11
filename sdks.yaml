@@ -22,6 +22,16 @@ tabs:
               - Download: https://pypi.org/project/python-openstackclient/
               - Docs: https://docs.openstack.org/python-openstackclient/latest/
 
+          - name: shade
+            title: Command-line interface for all OpenStack services
+            desc: >
+              Single command-line interface for OpenStack services with a
+              uniform command set and format.
+            project-team: Shade
+            links:
+              - Download: https://pypi.org/project/python-openstackclient/
+              - Docs: https://docs.openstack.org/python-openstackclient/latest/
+
       - category: Python SDKs
         components:
 
