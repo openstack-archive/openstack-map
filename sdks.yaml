@@ -22,6 +22,18 @@ tabs:
               - Download: https://pypi.org/project/python-openstackclient/
               - Docs: https://docs.openstack.org/python-openstackclient/latest/
 
+          - name: shade
+            title: Client library for interacting with OpenStack clouds
+            desc: >
+              shade is a simple client library for interacting with OpenStack clouds. 
+              The key word here is simple. Clouds can do many many many things - 
+              but there are probably only about 10 of them that most people care about 
+              with any regularity.
+            project-team: Shade
+            links:
+              - Download: https://pypi.org/project/shade/
+              - Docs: https://docs.openstack.org/shade/latest/
+
       - category: Python SDKs
         components:
 
