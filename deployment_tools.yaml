@@ -37,6 +37,10 @@ tabs:
               the Ansible framework.
             project-team: kolla
 
+          - name: openstack-ansible
+            title: Ansible playbooks to deploy OpenStack
+            project-team: OpenStackAnsible
+
           - name: openstack-charms
             title: Deploys OpenStack in containers using Charms and Juju
             desc: >
@@ -44,12 +48,18 @@ tabs:
               the Juju framework.
             project-team: OpenStack Charms
 
+          - name: bifrost
+            title: Ansible playbooks using ironic.
+            desc: >
+                Bifrost (pronounced bye-frost) is a set of Ansible playbooks 
+                that automates the task of deploying a base image onto a set of 
+                known hardware using ironic. It provides modular utility for 
+                one-off operating system deployment with as few operational 
+                requirements as reasonably possible.
+            project-team: Bifrost
+
       - category: Packaging recipes for popular frameworks
         components:
-
-          - name: openstack-ansible
-            title: Ansible playbooks to deploy OpenStack
-            project-team: OpenStackAnsible
 
           - name: LOCI
             title: Lightweight OCI containers
