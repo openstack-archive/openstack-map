@@ -1,0 +1,8 @@
+Code-Review+2: Jimmy McArthur <jimmy@tipit.net>
+Workflow+1: Thierry Carrez <thierry@openstack.org>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Fri, 21 Sep 2018 13:44:56 +0000
+Reviewed-on: https://review.openstack.org/604363
+Project: openstack/openstack-map
+Branch: refs/heads/master
