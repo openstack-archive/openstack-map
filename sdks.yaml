@@ -38,7 +38,7 @@ tabs:
         components:
 
           - name: openstacksdk
-            title: Command-line interface for all OpenStack services
+            title: Official Python SDK for OpenStack APIs
             desc: >
               Multi-cloud aware Python SDK for the OpenStack REST API
               exposing both the full set of low-level APIs as well as
