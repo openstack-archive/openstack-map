@@ -150,7 +150,7 @@ tabs:
               scaling feature differentiates Octavia from other load balancing
               solutions, thereby making Octavia truly suited “for the cloud.”
             project-team: octavia
-            since: Pike
+            since: Liberty
 
           - name: designate
             title: DNS service
