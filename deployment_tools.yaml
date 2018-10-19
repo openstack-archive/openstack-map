@@ -15,6 +15,8 @@ tabs:
 
           - name: tripleo
             title: Deploys OpenStack using OpenStack itself
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/tripleo-docs/latest/
             desc: >
               TripleO is a project aimed at installing, upgrading and
               operating OpenStack clouds using OpenStack’s own cloud
@@ -25,6 +27,8 @@ tabs:
 
           - name: openstack-helm
             title: Deploys OpenStack in containers using Helm
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/openstack-helm/latest/
             desc: >
               Collection of Helm charts that simply, resiliently,
               and flexibly deploy OpenStack and related services on Kubernetes.
@@ -32,6 +36,8 @@ tabs:
 
           - name: kolla-ansible
             title: Deploys OpenStack in containers using Ansible
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/kolla-ansible/latest/
             desc: >
               Kolla-Ansible deploys OpenStack via Kolla containers using
               the Ansible framework.
@@ -43,13 +49,24 @@ tabs:
 
           - name: openstack-charms
             title: Deploys OpenStack in containers using Charms and Juju
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/openstack-chef/latest/
+            download-title: Find OpenStack Charms in the Charm Store
+            download-url: https://jujucharms.com/openstack 
             desc: >
               Collection of Charms to deploy OpenStack using
               the Juju framework.
             project-team: OpenStack Charms
+            links:
+              - Juju Solutions for OpenStack: https://jujucharms.com/openstack
+              - Install OpenStack: https://www.ubuntu.com/openstack/install
+              - Install single-server OpenStack with conjure-up: >
+                  https://tutorials.ubuntu.com/tutorial/install-openstack-with-conjure-up
 
           - name: bifrost
             title: Ansible playbooks using ironic
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/bifrost/latest/
             desc: >
                 Bifrost (pronounced bye-frost) is a set of Ansible playbooks
                 that automates the task of deploying a base image onto a set of
@@ -63,6 +80,8 @@ tabs:
 
           - name: LOCI
             title: Lightweight OCI containers
+            docs-title: Project Wiki
+            docs-url: https://wiki.openstack.org/wiki/LOCI
             desc: >
               Recipes and tools to build lightweight OCI compliant container
               tooling and images for OpenStack services.
@@ -70,12 +89,34 @@ tabs:
 
           - name: puppet-openstack
             title: Puppet modules to deploy OpenStack
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/puppet-openstack-guide/latest/
+            desc: >
+              Puppet OpenStack modules bring scalable and reliable IT
+              automation to OpenStack cloud deployments.
             project-team: Puppet OpenStack
 
           - name: chef-openstack
             title: Chef cookbooks to deploy OpenStack
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/openstack-chef/latest/
+            download-title: Download
+            download-url: https://supermarket.chef.io/users/openstack
+            desc: >
+              The Chef cookbooks for OpenStack automate the building, operation
+              and consumption of OpenStack cloud deployments.
             project-team: Chef OpenStack
 
           - name: RPM-packaging
             title: RPM package specs to deploy OpenStack
+            docs-title: Project Wiki
+            docs-url: https://wiki.openstack.org/wiki/Rpm-packaging
+            desc: >
+                RPM Packaging for OpenStack is an cross-distribution and
+                cross-vendor effort to create common templates for building
+                OpenStack packages for RPM based Linux and OpenStack
+                distributions. The project was started with the goal of
+                unifying the independent packaging efforts of RDO and SUSE,
+                but is really open for anyone who wants to contribute RPM
+                packaging spec files for any distribution.
             project-team: Packaging-rpm
