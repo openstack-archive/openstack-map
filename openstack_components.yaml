@@ -16,6 +16,8 @@ tabs:
 
           - name: nova
             title: Compute Service
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/nova/latest/
             desc: >
               To implement services and associated libraries to provide
               massively scalable, on demand, self service access to compute
@@ -32,6 +34,8 @@ tabs:
 
           - name: zun
             title: Containers Service
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/zun/latest/
             desc: >
               Zun provides an OpenStack API for launching and managing
               containers backed by different container technologies.
@@ -47,6 +51,8 @@ tabs:
 
           - name: qinling
             title: Functions Service
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/qinling/latest/
             desc: >
               Qinling provides a platform to support serverless functions
               (like AWS Lambda).
@@ -58,6 +64,8 @@ tabs:
 
           - name: ironic
             title: Bare Metal Provisioning Service
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/ironic/latest/
             desc: >
               To implement services and associated libraries to provide
               massively scalable, on demand, self service access to compute
@@ -72,6 +80,8 @@ tabs:
 
           - name: cyborg
             title: Accelerators resource management
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/cyborg/latest/
             desc: >
               Cyborg provides a general purpose management framework for
               acceleration resources (i.e. various types of accelerators such
@@ -87,6 +97,8 @@ tabs:
 
           - name: swift
             title: Object store
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/swift/latest/
             desc: >
               Swift is a highly available, distributed, eventually consistent
               object/blob store. Organizations can use Swift to store lots of
@@ -101,6 +113,8 @@ tabs:
 
           - name: cinder
             title: Block Storage
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/cinder/latest/
             desc: >
               Cinder is a Block Storage service for OpenStack. It virtualizes
               the management of block storage devices and provides end users
@@ -116,6 +130,8 @@ tabs:
 
           - name: manila
             title: Shared filesystems
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/manila/latest/
             desc: >
               Manila provides coordinated access to shared or distributed file
               systems.
@@ -127,6 +143,8 @@ tabs:
 
           - name: neutron
             title: Networking
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/neutron/latest/
             desc: >
               OpenStack Neutron is an SDN networking project focused on
               delivering networking-as-a-service (NaaS) in virtual compute
@@ -138,6 +156,8 @@ tabs:
 
           - name: octavia
             title: Load balancer
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/octavia/latest/
             desc: >
               Octavia is an open source, operator-scale load balancing solution
               designed to work with OpenStack. Octavia was borne out of the
@@ -154,6 +174,8 @@ tabs:
 
           - name: designate
             title: DNS service
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/designate/latest/
             desc: >
               Designate provides DNS-as-a-service for OpenStack.
             project-team: designate
@@ -164,6 +186,8 @@ tabs:
 
           - name: keystone
             title: Identity service
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/keystone/latest/
             desc: >
               Keystone is an OpenStack service that provides API client
               authentication, service discovery, and distributed multi-tenant
@@ -174,6 +198,8 @@ tabs:
 
           - name: glance
             title: Image service
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/glance/latest/
             desc: >
               Glance image services include discovering, registering, and
               retrieving virtual machine images. Glance has a RESTful API
@@ -189,6 +215,8 @@ tabs:
 
           - name: barbican
             title: Key management
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/barbican/latest/
             desc: >
               Barbican is the OpenStack Key Manager service. It provides secure
               storage, provisioning and management of secret data, such as
@@ -199,6 +227,8 @@ tabs:
 
           - name: karbor
             title: Application Data Protection as a Service
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/karbor/latest/
             desc: >
               Karbor deals with protecting the Data and Meta-Data that
               comprises an OpenStack-deployed application against loss/damage
@@ -212,6 +242,8 @@ tabs:
 
           - name: searchlight
             title: Indexing and Search
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/searchlight/latest/
             desc: >
               The Searchlight project provides indexing and search capabilities
               across OpenStack resources. Its goal is to achieve high
@@ -228,6 +260,8 @@ tabs:
 
           - name: heat
             title: Orchestration
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/heat/latest/
             desc: >
               Heat orchestrates the infrastructure resources for a cloud
               application based on templates in the form of text files that
@@ -241,6 +275,8 @@ tabs:
 
           - name: senlin
             title: Clustering service
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/senlin/latest/
             desc: >
               Senlin is a clustering service for OpenStack clouds. It creates
               and operates clusters of homogeneous objects exposed by other
@@ -251,6 +287,8 @@ tabs:
 
           - name: mistral
             title: Workflow service
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/mistral/latest/
             desc: >
               Mistral is a workflow service. Most business processes consist
               of multiple distinct interconnected steps that need to be
@@ -265,6 +303,8 @@ tabs:
 
           - name: zaqar
             title: Messaging Service
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/zaqar/latest/
             desc: >
               Zaqar is a multi-tenant cloud messaging service for web and
               mobile developers. The service features a fully RESTful API,
@@ -281,6 +321,8 @@ tabs:
 
           - name: blazar
             title: Resource reservation service
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/blazar/latest/
             desc: >
               Blazar is a resource reservation service for OpenStack. Blazar
               enables users to reserve a specific type/amount of resources for
@@ -303,6 +345,8 @@ tabs:
 
           - name: magnum
             title: Container Orchestration Engine Provisioning
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/magnum/latest/
             desc: >
               Magnum makes container orchestration engines such as Docker
               Swarm, Kubernetes, and Apache Mesos available as first class
@@ -317,6 +361,8 @@ tabs:
 
           - name: sahara
             title: Big Data Processing Framework Provisioning
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/sahara/latest/
             desc: >
               The sahara project aims to provide users with a simple means
               to provision data processing frameworks (such as Hadoop, Spark
@@ -328,6 +374,8 @@ tabs:
 
           - name: trove
             title: Database as a Service
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/trove/latest/
             desc: >
               Trove is a database-as-a-service provisioning relational and
               non-relational database engines.
@@ -339,6 +387,8 @@ tabs:
 
           - name: masakari
             title: Instances High Availability Service
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/masakari/latest/
             desc: >
               Masakari provides Instances High Availability Service for
               OpenStack clouds by automatically recovering failed Instances.
@@ -351,6 +401,8 @@ tabs:
 
           - name: murano
             title: Application Catalog
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/murano/latest/
             desc: >
               Murano enables application developers and cloud administrators
               to publish various cloud-ready applications in a browsable
@@ -365,6 +417,8 @@ tabs:
 
           - name: solum
             title: Software Development Lifecycle Automation
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/solum/latest/
             desc: >
               To make cloud services easier to consume and integrate with
               your application development process by automating the
@@ -374,6 +428,8 @@ tabs:
 
           - name: freezer
             title: Backup, Restore, and Disaster Recovery
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/freezer/latest/
             desc: >
               Freezer is a distributed backup, restore and disaster recovery
               as a service platform. It is designed to be multi OS (Linux,
@@ -391,6 +447,8 @@ tabs:
 
           - name: EC2API
             title: EC2 API proxy
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/ec2-api/latest/
             desc: >
               Provides an EC2-compatible API to OpenStack Nova.
             project-team: ec2api
@@ -403,6 +461,8 @@ tabs:
 
           - name: horizon
             title: Dashboard
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/horizon/latest/
             desc: >
               Horizon is the canonical implementation of OpenStack's dashboard,
               which is extensible and provides a web based user interface to
@@ -422,6 +482,8 @@ tabs:
 
           - name: ceilometer
             title: Metering & Data Collection Service
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/ceilometer/latest/
             desc: >
               Ceilometer's goal is to efficiently collect, normalise and
               transform data produced by OpenStack services. The data it
@@ -435,6 +497,8 @@ tabs:
 
           - name: panko
             title: Event, Metadata Indexing Service
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/panko/latest/
             desc: >
               Panko is designed to provide a metadata indexing, event storage
               service which enables users to capture the state information of
@@ -446,6 +510,8 @@ tabs:
 
           - name: monasca
             title: Monitoring
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/monasca/latest/
             desc: >
               Monasca is a open-source multi-tenant, highly scalable,
               performant, fault-tolerant monitoring-as-a-service solution
@@ -460,6 +526,8 @@ tabs:
 
           - name: watcher
             title: Optimization Service
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/watcher/latest/
             desc: >
               Watcher provides a flexible and scalable resource optimization
               service for multi-tenant OpenStack-based clouds. Watcher provides
@@ -470,6 +538,8 @@ tabs:
 
           - name: vitrage
             title: Root Cause Analysis service
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/vitrage/latest/
             desc: >
               Vitrage is the OpenStack service for Root Cause Analysis.
               It is used to organize, analyze and visualize OpenStack alarms &
@@ -480,6 +550,8 @@ tabs:
 
           - name: congress
             title: Governance
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/congress/latest/
             desc: >
               Congress is an OpenStack project to provide policy as a service
               across any collection of cloud services in order to offer
@@ -489,6 +561,8 @@ tabs:
 
           - name: rally
             title: Benchmark service
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/rally/latest/
             desc: >
               Rally is a benchmarking and performance analysis tool for
               OpenStack that can be used to automate measuring and profiling
@@ -505,6 +579,8 @@ tabs:
 
           - name: cloudkitty
             title: Billing and chargebacks
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/cloudkitty/latest/
             desc: >
               CloudKitty is a rating-as-a-service project designed to translate
               metrics to prices. CloudKitty supports multiple collectors,
@@ -517,6 +593,8 @@ tabs:
 
           - name: tricircle
             title: Networking Automation for Multi-Region Deployments
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/tricircle/latest/
             desc: >
               Tricircle provides networking automation across Neutron in
               multi-region OpenStack deployments. Use cases include application
@@ -537,6 +615,8 @@ tabs:
 
           - name: storlets
             title: Computable object storage
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/storlets/latest/
             desc: >
               Openstack Storlets is an extension to Openstack Swift with the
               ability to run user defined computations - called storlets -
@@ -555,6 +635,8 @@ tabs:
 
           - name: dragonflow
             title: Distributed SDN controller
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/dragonflow/latest/
             desc: >
               Dragonflow is a distributed SDN controller for OpenStack Neutron
               supporting distributed Switching, Routing, DHCP and more.
@@ -573,6 +655,8 @@ tabs:
 
           - name: kuryr
             title: OpenStack Networking integration for containers
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/kuryr/latest/
             desc: >
               Bridge between containers frameworks networking models to
               OpenStack networking abstraction 
@@ -585,6 +669,8 @@ tabs:
 
           - name: tacker
             title: NFV Orchestration
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/tacker/latest/
             desc: >
               Tacker provides a generic VNF Manager (VNFM) and an NFV
               Orchestrator (NFVO) to deploy and operate Network Services
