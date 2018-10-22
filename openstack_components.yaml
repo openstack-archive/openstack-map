@@ -580,20 +580,6 @@ tabs:
             dependencies:
               - neutron
 
-          - name: fuxi
-            title: OpenStack Storage integration for containers
-            desc: >
-              Fuxi focuses on enabling Docker container to use Cinder volume
-              and Manila share, thus Docker volume can reuse the advance
-              features and numerous vendor drivers in Cinder and Manila.
-              With Fuxi, Cinder and Manila can be used as the unified
-              persistence storage provider for virtual machine, baremetal
-              and Docker container.
-            project-team: kuryr
-            see-also:
-              - cinder
-              - manila
-
       - category: NFV
         components:
 
