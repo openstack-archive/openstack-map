@@ -630,20 +630,6 @@ tabs:
             dependencies:
               - swift
 
-      - category: Neutron plug-ins
-        components:
-
-          - name: dragonflow
-            title: Distributed SDN controller
-            docs-title: Docs
-            docs-url: https://docs.openstack.org/dragonflow/latest/
-            desc: >
-              Dragonflow is a distributed SDN controller for OpenStack Neutron
-              supporting distributed Switching, Routing, DHCP and more.
-            project-team: dragonflow
-            dependencies:
-              - neutron
-
   - name: Bridges for adjacent tech
     prelude: >
       Software in this section facilitates integration of OpenStack components
