@@ -75,6 +75,29 @@ tabs:
                 requirements as reasonably possible.
             project-team: Bifrost
 
+          - name: openstack-cluster-installer
+            title: OpenStack Cluster Installer (OCI)
+            docs-title: Docs
+            docs-url: https://salsa.debian.org/openstack-team/debian/openstack-cluster-installer
+            desc: >
+                OCI (OpenStack Cluster Installer) is a software to
+                provision an OpenStack cluster automatically. This
+                package install a provisioning machine, which consists
+                of a DHCP server, a PXE boot server, a web server, and
+                a puppet-master. Once computers in the cluster boot for
+                the first time, a Debian live system is served by OCI,
+                to act as a discovery image. This live system then
+                reports the hardware features back to OCI. The computers
+                can then be installed with Debian from that live system,
+                configured with a puppet-agent that will connect to the
+                puppet-master of OCI. After Debian is installed, the
+                server reboots under it, and OpenStack services is then
+                provisionned in these machines, depending on their role
+                in the cluster. OCI is fully packaged in Debian, including
+                all of the Puppet modules and so on. After installing the
+                OCI package and its dependency, no other artificat needs
+                to be installed on your provisioning server.
+
       - category: Packaging recipes for popular frameworks
         components:
 
