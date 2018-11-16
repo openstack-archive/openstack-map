@@ -75,6 +75,17 @@ tabs:
                 requirements as reasonably possible.
             project-team: Bifrost
 
+          - name: kayobe
+            title: Deployment of containerised OpenStack to bare metal
+            docs-title: Docs
+            docs-url: https://kayobe.readthedocs.io
+            desc: >
+              Kayobe deploys a containerised OpenStack control plane to bare
+              metal.  Bifrost is used to discover and provision the cloud
+              servers.  Kolla is used to build container images for OpenStack
+              services.  Kolla Ansible is used to deploy a containerised
+              OpenStack control plane.
+
       - category: Packaging recipes for popular frameworks
         components:
 
