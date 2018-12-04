@@ -33,6 +33,13 @@ tabs:
               Collection of Helm charts that simply, resiliently,
               and flexibly deploy OpenStack and related services on Kubernetes.
             project-team: OpenStack-Helm
+            video:
+              id: QQlzhp6zrX0
+              desc: >
+                Project Updates cover the latest changes in the project. See
+                what's new in the latest OpenStack release, and what you can
+                expect to see from the project in the upcoming release.
+              title: openstack-helm - Project Update
 
           - name: kolla-ansible
             title: Deploys OpenStack in containers using Ansible
@@ -42,6 +49,13 @@ tabs:
               Kolla-Ansible deploys OpenStack via Kolla containers using
               the Ansible framework.
             project-team: kolla
+            video:
+              id: IJTBJXdlo9E
+              desc: >
+                Project Updates cover the latest changes in the project. See
+                what's new in the latest OpenStack release, and what you can
+                expect to see from the project in the upcoming release.
+              title: Kolla - Project Update
 
           - name: openstack-ansible
             title: Ansible playbooks to deploy OpenStack
@@ -62,6 +76,13 @@ tabs:
               - Install OpenStack: https://www.ubuntu.com/openstack/install
               - Install single-server OpenStack with conjure-up: >
                   https://tutorials.ubuntu.com/tutorial/install-openstack-with-conjure-up
+            video:
+              id: iABGeJGxg2U
+              desc: >
+                Project Updates cover the latest changes in the project. See
+                what's new in the latest OpenStack release, and what you can
+                expect to see from the project in the upcoming release.
+              title: Charms - Project Update
 
           - name: bifrost
             title: Ansible playbooks using ironic

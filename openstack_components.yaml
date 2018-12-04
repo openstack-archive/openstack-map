@@ -110,6 +110,13 @@ tabs:
             since: Austin
             see-also:
               - storlets
+            video:
+              id: _I7vC3oXqRw
+              desc: >
+                Project Updates cover the latest changes in the project. See
+                what's new in the latest OpenStack release, and what you can
+                expect to see from the project in the upcoming release.
+              title: Swift - Project Update
 
           - name: cinder
             title: Block Storage
@@ -171,6 +178,13 @@ tabs:
               solutions, thereby making Octavia truly suited “for the cloud.”
             project-team: octavia
             since: Liberty
+            video:
+              id: tlaU_-xm-14
+              desc: >
+                Project Updates cover the latest changes in the project. See
+                what's new in the latest OpenStack release, and what you can
+                expect to see from the project in the upcoming release.
+              title: Octavia - Project Update
 
           - name: designate
             title: DNS service
@@ -180,6 +194,13 @@ tabs:
               Designate provides DNS-as-a-service for OpenStack.
             project-team: designate
             since: Liberty
+            video:
+              id: A8p6FGJwNHM
+              desc: >
+                Project Updates cover the latest changes in the project. See
+                what's new in the latest OpenStack release, and what you can
+                expect to see from the project in the upcoming release.
+              title: Designate - Project Update
 
       - category: Shared services
         components:
@@ -212,6 +233,13 @@ tabs:
             see-also:
               - nova
               - swift
+            video:
+              id: 6EjvDzZmRxw
+              desc: >
+                Project Updates cover the latest changes in the project. See
+                what's new in the latest OpenStack release, and what you can
+                expect to see from the project in the upcoming release.
+              title: openstack-helm - Project Update
 
           - name: barbican
             title: Key management
@@ -300,6 +328,13 @@ tabs:
               availability.
             project-team: mistral
             since: Liberty
+            video:
+              id: lV_QPfH_PyE
+              desc: >
+                Project Updates cover the latest changes in the project. See
+                what's new in the latest OpenStack release, and what you can
+                expect to see from the project in the upcoming release.
+              title: Mistral - Project Update
 
           - name: zaqar
             title: Messaging Service
@@ -318,6 +353,13 @@ tabs:
               SQS and SNS to their customers.
             project-team: zaqar
             since: Liberty
+            video:
+              id: SbKtx7siiNE
+              desc: >
+                Project Updates cover the latest changes in the project. See
+                what's new in the latest OpenStack release, and what you can
+                expect to see from the project in the upcoming release.
+              title: Zaqar - Project Update
 
           - name: blazar
             title: Resource reservation service
@@ -381,6 +423,13 @@ tabs:
               non-relational database engines.
             project-team: trove
             since: Icehouse
+            video:
+              id: I5RSL-ApwKY
+              desc: >
+                Project Updates cover the latest changes in the project. See
+                what's new in the latest OpenStack release, and what you can
+                expect to see from the project in the upcoming release.
+              title: Trove - Project Update
 
       - category: Application lifecycle
         components:
@@ -398,6 +447,13 @@ tabs:
               API service to manage and control the automated rescue mechanism.
             project-team: masakari
             since: Rocky
+            video:
+              id: EZAbLpsSPiU
+              desc: >
+                Project Updates cover the latest changes in the project. See
+                what's new in the latest OpenStack release, and what you can
+                expect to see from the project in the upcoming release.
+              title: Masakari - Project Update
 
           - name: murano
             title: Application Catalog
@@ -469,6 +525,13 @@ tabs:
               OpenStack services.
             project-team: horizon
             since: Essex
+            video:
+              id: IMHghWqgly4
+              desc: >
+                Project Updates cover the latest changes in the project. See
+                what's new in the latest OpenStack release, and what you can
+                expect to see from the project in the upcoming release.
+              title: Horizon - Project Update
 
   - name: Operations services
     map-bucket: openstack-operations
@@ -547,6 +610,13 @@ tabs:
               deduce their existence before they are directly detected.
             project-team: vitrage
             since: Newton
+            video:
+              id: friCH35Trow
+              desc: >
+                Project Updates cover the latest changes in the project. See
+                what's new in the latest OpenStack release, and what you can
+                expect to see from the project in the upcoming release.
+              title: Vitrage - Project Update
 
           - name: congress
             title: Governance
