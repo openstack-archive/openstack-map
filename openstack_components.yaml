@@ -312,6 +312,13 @@ tabs:
               collections of similar objects easier.
             project-team: senlin
             since: Mitaka
+            video:
+              id: juU6Lgo2jxg
+              desc: >
+                Project Updates cover the latest changes in the project. See
+                what's new in the latest OpenStack release, and what you can
+                expect to see from the project in the upcoming release.
+              title: Senlin - Project Update
 
           - name: mistral
             title: Workflow service
