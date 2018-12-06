@@ -185,6 +185,14 @@ tabs:
                 what's new in the latest OpenStack release, and what you can
                 expect to see from the project in the upcoming release.
               title: Octavia - Project Update
+            dependencies:
+              - glance
+              - keystone
+              - neutron
+              - nova
+            see-also:
+              - barbican
+              - horizon
 
           - name: designate
             title: DNS service
