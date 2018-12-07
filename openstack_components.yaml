@@ -469,6 +469,9 @@ tabs:
               OpenStack services.
             project-team: horizon
             since: Essex
+            support-teams:
+              - i18n
+              - docs
 
   - name: Operations services
     map-bucket: openstack-operations
@@ -666,3 +669,36 @@ tabs:
               Services end-to-end using VNFs.
             project-team: tacker
             since: Mitaka
+
+  - name: Supporting OpenStack Projects
+    prelude: >
+      Projects in this section supporting other OpenStack projects and
+      components
+    categories:
+
+      - category: Internationalization
+        components:
+
+          - name: i18n
+            title: Internationalization of OpenStack components and documentation
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/i18n/
+            desc: >
+              To make OpenStack ubiquitously accessible to people of all language
+              backgrounds.
+            project-team: i18n
+            since: Mitaka
+
+      - category: Documentation
+        components:
+
+          - name: docs
+            title: Documentation of OpenStack components
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/doc-contrib-guide/
+            desc: >
+              The documentation team provides guidance, assistance, tooling, and
+              style guides enabling OpenStack project teams to produce consistent,
+              accurate, and high-quality documentation.
+            project-team: docs
+            since: Austin
