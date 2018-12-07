@@ -469,6 +469,9 @@ tabs:
               OpenStack services.
             project-team: horizon
             since: Essex
+            support-teams:
+              - i18n
+              - docs
 
   - name: Operations services
     map-bucket: openstack-operations
