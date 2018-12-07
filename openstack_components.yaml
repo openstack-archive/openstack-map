@@ -547,6 +547,10 @@ tabs:
                 what's new in the latest OpenStack release, and what you can
                 expect to see from the project in the upcoming release.
               title: Horizon - Project Update
+            support-teams:
+            support-teams:
+               i18n: https://governance.openstack.org/tc/reference/projects/i18n.html
+               docs: https://governance.openstack.org/tc/reference/projects/documentation.html
 
   - name: Operations services
     map-bucket: openstack-operations
