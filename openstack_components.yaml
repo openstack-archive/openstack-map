@@ -547,6 +547,9 @@ tabs:
                 what's new in the latest OpenStack release, and what you can
                 expect to see from the project in the upcoming release.
               title: Horizon - Project Update
+            support-teams:
+              - i18n
+              - docs
 
   - name: Operations services
     map-bucket: openstack-operations
