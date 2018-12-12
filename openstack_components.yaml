@@ -470,6 +470,13 @@ tabs:
             since: Kilo
             dependencies:
               - heat
+            video:
+              id: _TYxz6prQmc
+              desc: >
+                Project Updates cover the latest changes in the project. See
+                what's new in the latest OpenStack release, and what you can
+                expect to see from the project in the upcoming release.
+              title: Murano - Project Update
 
           - name: solum
             title: Software Development Lifecycle Automation
