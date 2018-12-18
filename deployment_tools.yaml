@@ -59,7 +59,19 @@ tabs:
 
           - name: openstack-ansible
             title: Ansible playbooks to deploy OpenStack
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/openstack-ansible/latest/
+            desc: >
+              OpenStack-Ansible provides Ansible playbooks and roles for the
+              deployment and configuration of an OpenStack environment.
             project-team: OpenStackAnsible
+            video:
+              id: z5gkETEetT8
+              desc: >
+                Project Updates cover the latest changes in the project. See
+                what's new in the latest OpenStack release, and what you can
+                expect to see from the project in the upcoming release.
+              title: OpenStackAnsible - Project Update
 
           - name: openstack-charms
             title: Deploys OpenStack in containers using Charms and Juju
