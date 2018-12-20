@@ -78,7 +78,7 @@ tabs:
             docs-title: Docs
             docs-url: https://docs.openstack.org/openstack-chef/latest/
             download-title: Find OpenStack Charms in the Charm Store
-            download-url: https://jujucharms.com/openstack 
+            download-url: https://jujucharms.com/openstack
             desc: >
               Collection of Charms to deploy OpenStack using
               the Juju framework.
