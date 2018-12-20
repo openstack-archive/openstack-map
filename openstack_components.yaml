@@ -738,7 +738,7 @@ tabs:
             docs-url: https://docs.openstack.org/kuryr/latest/
             desc: >
               Bridge between containers frameworks networking models to
-              OpenStack networking abstraction 
+              OpenStack networking abstraction
             project-team: kuryr
             dependencies:
               - neutron
