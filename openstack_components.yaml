@@ -421,6 +421,19 @@ tabs:
               topology, node hardware details and more.
             project-team: sahara
             since: Juno
+            dependencies:
+              - cinder
+              - keystone
+              - glance
+              - heat
+              - neutron
+              - nova
+            see-also:
+              - barbican
+              - designate
+              - manila
+              - horizon
+              - swift
 
           - name: trove
             title: Database as a Service
