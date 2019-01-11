@@ -653,6 +653,15 @@ tabs:
               deduce their existence before they are directly detected.
             project-team: vitrage
             since: Newton
+            see-also:
+              - nova
+              - neutron
+              - cinder
+              - heat
+              - aodh
+              - trove
+              - congress
+              - monasca
             video:
               id: friCH35Trow
               desc: >
