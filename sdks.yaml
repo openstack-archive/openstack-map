@@ -6,7 +6,7 @@ tabs:
   - name: SDKs
     map-bucket: openstack-user
     prelude: >
-      Client tools and libraries for OpenStack cloud end users.
+      SDKs are language-specific wrappers around the OpenStack HTTP API.
     categories:
 
       - category: Command-line clients
