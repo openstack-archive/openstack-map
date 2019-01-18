@@ -48,6 +48,13 @@ tabs:
               technologies.
             project-team: zun
             since: Pike
+            dependencies:
+              - keystone
+              - neutron
+              - kuryr
+            see-also:
+              - cinder
+              - glance
 
           - name: qinling
             title: Functions Service
