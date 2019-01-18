@@ -65,6 +65,19 @@ tabs:
               (like AWS Lambda).
             project-team: qinling
             since: Rocky
+            video:
+              id: IEmIps9Vgrc
+              desc: >
+                Project Updates cover the latest changes in the project. See
+                what's new in the latest OpenStack release, and what you can
+                expect to see from the project in the upcoming release.
+              title: qinling - Project Update
+            dependencies:
+              - keystone
+            see-also:
+              - aodh
+              - horizon
+              - swift
 
       - category: Bare metal
         components:
