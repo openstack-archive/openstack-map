@@ -26,11 +26,14 @@ tabs:
             project-team: nova
             since: Austin
             dependencies:
-              - cinder
+              - keystone
               - neutron
               - glance
             see-also:
+              - cinder
               - ironic
+              - barbican
+              - designate
 
           - name: zun
             title: Containers Service
@@ -65,6 +68,12 @@ tabs:
               (like AWS Lambda).
             project-team: qinling
             since: Rocky
+            dependencies:
+              - keystone
+            see-also:
+              - aodh
+              - horizon
+              - swift
             video:
               id: IEmIps9Vgrc
               desc: >
@@ -72,12 +81,6 @@ tabs:
                 what's new in the latest OpenStack release, and what you can
                 expect to see from the project in the upcoming release.
               title: qinling - Project Update
-            dependencies:
-              - keystone
-            see-also:
-              - aodh
-              - horizon
-              - swift
 
       - category: Bare metal
         components:
@@ -93,10 +96,13 @@ tabs:
               containers.
             project-team: ironic
             since: Kilo
-            dependencies:
-              - glance
             see-also:
+              - keystone
               - nova
+              - cinder
+              - neutron
+              - glance
+              - swift
 
           - name: cyborg
             title: Accelerators resource management
@@ -110,7 +116,7 @@ tabs:
             project-team: cyborg
             since: Rocky
             dependencies:
-              - nova
+              - keystone
 
       - category: Storage
         components:
@@ -155,8 +161,11 @@ tabs:
               drivers for other storage.
             project-team: cinder
             since: Folsom
+            dependencies:
+              - keystone
             see-also:
               - nova
+              - barbican
 
           - name: manila
             title: Shared filesystems
@@ -167,6 +176,8 @@ tabs:
               systems.
             project-team: manila
             since: Liberty
+            see-also:
+              - keystone
 
       - category: Networking
         components:
@@ -181,6 +192,8 @@ tabs:
               environments.
             project-team: neutron
             since: Folsom
+            dependencies:
+              - keystone
             see-also:
               - nova
 
@@ -201,13 +214,6 @@ tabs:
               solutions, thereby making Octavia truly suited “for the cloud.”
             project-team: octavia
             since: Liberty
-            video:
-              id: tlaU_-xm-14
-              desc: >
-                Project Updates cover the latest changes in the project. See
-                what's new in the latest OpenStack release, and what you can
-                expect to see from the project in the upcoming release.
-              title: Octavia - Project Update
             dependencies:
               - glance
               - keystone
@@ -216,6 +222,13 @@ tabs:
             see-also:
               - barbican
               - horizon
+            video:
+              id: tlaU_-xm-14
+              desc: >
+                Project Updates cover the latest changes in the project. See
+                what's new in the latest OpenStack release, and what you can
+                expect to see from the project in the upcoming release.
+              title: Octavia - Project Update
 
           - name: designate
             title: DNS service
@@ -225,6 +238,11 @@ tabs:
               Designate provides DNS-as-a-service for OpenStack.
             project-team: designate
             since: Liberty
+            dependencies:
+              - keystone
+            see-also:
+              - nova
+              - neutron
             video:
               id: A8p6FGJwNHM
               desc: >
@@ -261,6 +279,8 @@ tabs:
               to object-storage systems like the OpenStack Swift project.
             project-team: glance
             since: Bexar
+            dependencies:
+              - keystone
             see-also:
               - nova
               - swift
@@ -283,6 +303,14 @@ tabs:
               data.
             project-team: barbican
             since: Liberty
+            dependencies:
+              - keystone
+            see-also:
+              - cinder
+              - murano
+              - nova
+              - octavia
+              - sahara
 
           - name: karbor
             title: Application Data Protection as a Service
@@ -298,6 +326,16 @@ tabs:
               the user.
             project-team: karbor
             since: Pike
+            dependencies:
+              - keystone
+            see-also:
+              - cinder
+              - glance
+              - manila
+              - neutron
+              - nova
+              - swift
+              - trove
 
           - name: searchlight
             title: Indexing and Search
@@ -313,6 +351,16 @@ tabs:
               appropriate protection of data.
             project-team: searchlight
             since: Liberty
+            dependencies:
+              - keystone
+            see-also:
+              - cinder
+              - glance
+              - designate
+              - neutron
+              - nova
+              - swift
+              - ironic
 
       - category: Orchestration
         components:
@@ -331,6 +379,27 @@ tabs:
               as a resource in a template.
             project-team: heat
             since: Havana
+            dependencies:
+              - keystone
+            see-also:
+              - aodh
+              - barbican
+              - cinder
+              - designate
+              - glance
+              - magnum
+              - manila
+              - mistral
+              - monasca
+              - neutron
+              - nova
+              - octavia
+              - sahara
+              - senlin
+              - swift
+              - trove
+              - zaqar
+              - zun
 
           - name: senlin
             title: Clustering service
@@ -343,6 +412,16 @@ tabs:
               collections of similar objects easier.
             project-team: senlin
             since: Mitaka
+            dependencies:
+              - keystone
+            see-also:
+              - aodh
+              - glance
+              - heat
+              - neutron
+              - nova
+              - octavia
+              - zaqar
             video:
               id: juU6Lgo2jxg
               desc: >
@@ -366,6 +445,8 @@ tabs:
               availability.
             project-team: mistral
             since: Liberty
+            dependencies:
+              - keystone
             video:
               id: lV_QPfH_PyE
               desc: >
@@ -391,6 +472,11 @@ tabs:
               SQS and SNS to their customers.
             project-team: zaqar
             since: Liberty
+            dependencies:
+              - keystone
+            see-also:
+              - horizon
+              - swift
             video:
               id: SbKtx7siiNE
               desc: >
@@ -410,15 +496,27 @@ tabs:
               based on their reservations.
             project-team: blazar
             since: Queens
+            dependencies:
+              - keystone
+              - nova
+            see-also:
+              - neutron
 
           - name: aodh
             title: Alarming Service
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/aodh/latest/
             desc: >
               Aodh's goal is to enable the ability to trigger actions based
               on defined rules against sample or event data collected by
               Ceilometer.
             project-team: Telemetry
             since: Liberty
+            dependencies:
+              - keystone
+            see-also:
+              - ceilometer
+              - heat
 
       - category: Workload provisioning
         components:
@@ -437,7 +535,15 @@ tabs:
             project-team: magnum
             since: Mitaka
             dependencies:
+              - keystone
               - heat
+              - nova
+              - neutron
+              - glance
+            see-also:
+              - cinder
+              - octavia
+              - barbican
 
           - name: sahara
             title: Big Data Processing Framework Provisioning
@@ -475,6 +581,14 @@ tabs:
               non-relational database engines.
             project-team: trove
             since: Icehouse
+            dependencies:
+              - cinder
+              - keystone
+              - glance
+              - nova
+              - swift
+            see-also:
+              - designate
             video:
               id: I5RSL-ApwKY
               desc: >
@@ -499,6 +613,9 @@ tabs:
               API service to manage and control the automated rescue mechanism.
             project-team: masakari
             since: Rocky
+            dependencies:
+              - keystone
+              - nova
             video:
               id: EZAbLpsSPiU
               desc: >
@@ -521,7 +638,13 @@ tabs:
             project-team: murano
             since: Kilo
             dependencies:
+              - keystone
               - heat
+            see-also:
+              - congress
+              - barbican
+              - horizon
+              - mistral
             video:
               id: _TYxz6prQmc
               desc: >
@@ -540,6 +663,15 @@ tabs:
               source-to-image process, and simplifying app-centric deployment.
             project-team: solum
             since: Mitaka
+            dependencies:
+              - keystone
+              - heat
+            see-also:
+              - glance
+              - swift
+              - zaqar
+              - barbican
+              - mistral
 
           - name: freezer
             title: Backup, Restore, and Disaster Recovery
@@ -556,6 +688,10 @@ tabs:
               large ephemeral Clouds.
             project-team: freezer
             since: Mitaka
+            dependencies:
+              - keystone
+            see-also:
+              - swift
 
       - category: API proxies
         components:
@@ -569,7 +705,11 @@ tabs:
             project-team: ec2api
             since: Rocky
             dependencies:
+              - keystone
               - nova
+              - neutron
+              - cinder
+              - glance
 
       - category: Web frontend
         components:
@@ -583,7 +723,12 @@ tabs:
               which is extensible and provides a web based user interface to
               OpenStack services.
             project-team: horizon
+            support-teams:
+              - i18n
+              - documentation
             since: Essex
+            dependencies:
+              - keystone
             video:
               id: IMHghWqgly4
               desc: >
@@ -591,9 +736,6 @@ tabs:
                 what's new in the latest OpenStack release, and what you can
                 expect to see from the project in the upcoming release.
               title: Horizon - Project Update
-            support-teams:
-              - i18n
-              - documentation
 
   - name: Operations services
     map-bucket: openstack-operations
