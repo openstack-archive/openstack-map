@@ -1,0 +1,16 @@
+Code-Review+1: Pierre Riteau <pierre@stackhpc.com>
+Code-Review+1: Andrey Pavlov <andrey.mp@gmail.com>
+Code-Review+1: Trinh Nguyen <dangtrinhnt@gmail.com>
+Code-Review+1: Duc Truong <dtruong@blizzard.com>
+Code-Review+1: Jiao Pengju <jiaopengju@cmss.chinamobile.com>
+Code-Review+1: Renat Akhmerov <renat.akhmerov@gmail.com>
+Code-Review+1: Spyros Trigazis <strigazi@gmail.com>
+Code-Review+1: zhurong <aaronzhu1121@gmail.com>
+Code-Review+2: Jimmy McArthur <jimmy@tipit.net>
+Workflow+1: Jimmy McArthur <jimmy@tipit.net>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Fri, 15 Feb 2019 20:28:19 +0000
+Reviewed-on: https://review.openstack.org/636604
+Project: openstack/openstack-map
+Branch: refs/heads/master
