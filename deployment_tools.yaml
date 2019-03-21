@@ -108,6 +108,17 @@ tabs:
                 requirements as reasonably possible.
             project-team: Bifrost
 
+          - name: chef-openstack
+            title: Chef cookbooks to deploy OpenStack
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/openstack-chef/latest/
+            download-title: Cookbooks
+            download-url: https://supermarket.chef.io/users/openstack
+            desc: >
+              The Chef cookbooks for OpenStack automate the building, operation
+              and consumption of OpenStack cloud deployments.
+            project-team: OpenStack Chef
+
       - category: Packaging recipes for popular frameworks
         components:
 
@@ -128,17 +139,6 @@ tabs:
               Puppet OpenStack modules bring scalable and reliable IT
               automation to OpenStack cloud deployments.
             project-team: Puppet OpenStack
-
-          - name: chef-openstack
-            title: Chef cookbooks to deploy OpenStack
-            docs-title: Docs
-            docs-url: https://docs.openstack.org/openstack-chef/latest/
-            download-title: Download
-            download-url: https://supermarket.chef.io/users/openstack
-            desc: >
-              The Chef cookbooks for OpenStack automate the building, operation
-              and consumption of OpenStack cloud deployments.
-            project-team: Chef OpenStack
 
           - name: RPM-packaging
             title: RPM package specs to deploy OpenStack
