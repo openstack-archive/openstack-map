@@ -122,6 +122,15 @@ tabs:
       - category: Packaging recipes for popular frameworks
         components:
 
+          - name: kolla
+            title: Production-ready OpenStack containers
+            docs-title: Docs
+            docs-url: https://docs.openstack.org/kolla/latest/
+            desc: >
+              Recipes and tools to build production-ready OpenStack container
+              images for multiple operating system distributions.
+            project-team: kolla
+
           - name: LOCI
             title: Lightweight OCI containers
             docs-title: Project Wiki
